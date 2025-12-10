@@ -1,4 +1,4 @@
-# pydantic настройки для того, чтобы подтянуть перемененные окружения 
+# pydantic настройки  
 
 from pydantic_settings import BaseSettings # для типизации
 

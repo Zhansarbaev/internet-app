@@ -7,8 +7,8 @@ from app.config import settings
 engine = create_engine(
     
     settings.DATABASE_URL,
-    echo = True, # логирование запросов (для вывода в консоль))
-    pool_pre_ping = True # проверка коннекта с бд
+    echo = True, # логирование запросов 
+    pool_pre_ping = True 
 )
 
 #Session maker
@@ -19,4 +19,4 @@ SessionLocal = sessionmaker(
     bind = engine
 )
 
-Base = declarative_base() # род. класс для всех таблиц и моделей в орм
+Base = declarative_base() 

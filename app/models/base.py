@@ -2,8 +2,6 @@
 
 from app.database import Base
 
-# модели
-
 from app.models.product import Product
 from app.models.customer import Customer
 from app.models.order import Order
