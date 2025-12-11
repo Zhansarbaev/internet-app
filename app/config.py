@@ -9,5 +9,6 @@ class Settings(BaseSettings):
     class Config:
         env_file = ".env"
         case_sensitive = True #для регистра
+        extra = "ignore"
 
 settings = Settings() #экземпляр 

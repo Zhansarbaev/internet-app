@@ -5,7 +5,7 @@ from typing import List
 from app.dependencies import get_db
 from app.models.order import Order
 from app.models.order_item import OrderItem
-from app.schemas.product import Product
+from app.models.product import Product
 from app.models.customer import Customer
 from app.schemas.order import OrderCreate, OrderUpdate, OrderResponse
 

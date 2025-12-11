@@ -10,7 +10,7 @@ class OrderItem(Base): # таблица связывает ордер и про�
     order_id = Column(Integer, ForeignKey('oders.id'), nullable = False)
     product_id = Column(Integer, ForeignKey('products_id'), nullable = False)
     quantity = Column(Integer, nullable = False, default = 1)
-    price = Column(float, nullable = False)
+    price = Column(Float, nullable = False)
 
     __table_args__ = (
         CheckConstraint('quantity > 0', name = 'check_quantity_positive'),
