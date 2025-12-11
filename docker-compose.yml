@@ -36,6 +36,19 @@ services:
     networks:
       - shop_network
 
+  migrate:
+    build: .
+    container_name: shop_migrate
+    command: alembic upgrade head
+    volumes:
+      - .:/code
+    env_file:
+      - .env
+    depends_on:
+      - db
+    networks:
+      - shop_network
+
 volumes:
   postgres_data:
 
