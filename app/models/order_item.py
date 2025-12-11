@@ -18,7 +18,7 @@ class OrderItem(Base): # таблица связывает ордер и про�
     )
 
     order = relationship('Order', back_populates = 'order_items')
-    product = relationship('Proguct', back_populates = 'order_items')
+    product = relationship('Product', back_populates = 'order_items')
 
     def __repr__(self):
         return f"<OrderItem(order_id = {self.order_id}, product_id = {self.product_id}, qty = {self.quantity})>"
