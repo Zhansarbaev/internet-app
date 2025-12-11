@@ -18,7 +18,7 @@ def get_customers(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)
 def get_customer(customer_id: int, db: Session = Depends(get_db)):
     customer = db.query(Customer).filter(Customer.id == customer_id).first()
     if not customer:
-        raise HTTPException(statuc_code = status.HTTP_404_NOT_FOUND, detail = "Клиент не найден")
+        raise HTTPException(status_code = status.HTTP_404_NOT_FOUND, detail = "Клиент не найден")
     return customer
 
 @router.post("/", response_model = CustomerResponse, status_code = status.HTTP_201_CREATED, description = "Создать нового клиента")

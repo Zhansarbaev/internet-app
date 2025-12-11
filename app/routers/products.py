@@ -15,7 +15,7 @@ def get_products(skip: int = 0, limit: int = 100, db: Session = Depends(get_db))
 
 @router.get("/{product_id}", response_model = ProductResponse, description = "Получить продукт по ID")
 def get_product(product_id: int, db: Session = Depends(get_db)):
-    product = db.query(Product).filter(Product.id == product.id).first()
+    product = db.query(Product).filter(Product.id == product_id).first()
     if not product:
         raise HTTPException(status_code = status.HTTP_404_NOT_FOUND, detail = "Продукт не найден")
     return product
